@@ -14,7 +14,7 @@ const SystemHealth = () => {
 
   const fetchHealthData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/system-health');
+      const response = await axios.get('https://multi-tenant-ldn8.onrender.com/system-health');
       setHealthData(response.data);
     } catch (error) {
       toast.error('Failed to load system health data');

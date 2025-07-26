@@ -29,8 +29,8 @@ npm start
 ## 🌐 Access URLs
 
 - **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8000
-- **API Docs**: http://localhost:8000/docs
+- **Backend API**: https://multi-tenant-ldn8.onrender.com
+- **API Docs**: https://multi-tenant-ldn8.onrender.com/docs
 
 ## ✅ Features Implemented
 

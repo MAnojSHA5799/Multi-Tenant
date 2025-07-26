@@ -18,8 +18,8 @@ const PipelineManagement = () => {
   const fetchData = async () => {
     try {
       const [customersRes, healthRes] = await Promise.all([
-        axios.get('http://localhost:8000/customers'),
-        axios.get('http://localhost:8000/system-health')
+        axios.get('https://multi-tenant-ldn8.onrender.com/customers'),
+        axios.get('https://multi-tenant-ldn8.onrender.com/system-health')
       ]);
 
       setCustomers(customersRes.data);
@@ -55,10 +55,10 @@ const PipelineManagement = () => {
 
     try {
       // First ensure pipeline exists
-      await axios.post(`http://localhost:8000/customers/${customerId}/pipeline`);
+      await axios.post(`https://multi-tenant-ldn8.onrender.com/customers/${customerId}/pipeline`);
       
       // Then update the state
-      await axios.put(`http://localhost:8000/customers/${customerId}/pipeline`, {
+      await axios.put(`https://multi-tenant-ldn8.onrender.com/customers/${customerId}/pipeline`, {
         is_running: !currentState
       });
 

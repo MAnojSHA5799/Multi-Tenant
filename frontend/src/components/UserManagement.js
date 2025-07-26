@@ -24,7 +24,7 @@ const UserManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/users', {
+      const response = await axios.get('https://multi-tenant-ldn8.onrender.com/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ const UserManagement = () => {
       if (editingUser) {
         // Update existing user
         await axios.put(
-          `http://localhost:8000/users/${editingUser.id}`,
+          `https://multi-tenant-ldn8.onrender.com/users/${editingUser.id}`,
           formData,
           {
             headers: {
@@ -58,7 +58,7 @@ const UserManagement = () => {
       } else {
         // Create new user
         await axios.post(
-          'http://localhost:8000/users',
+          'https://multi-tenant-ldn8.onrender.com/users',
           formData,
           {
             headers: {
@@ -99,7 +99,7 @@ const UserManagement = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:8000/users/${userId}`, {
+      await axios.delete(`https://multi-tenant-ldn8.onrender.com/users/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -47,8 +47,8 @@ A lightweight multi-tenant admin portal built with FastAPI and React for managin
 
 3. **Access the application**:
    - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8000
-   - API Documentation: http://localhost:8000/docs
+   - Backend API: https://multi-tenant-ldn8.onrender.com
+   - API Documentation: https://multi-tenant-ldn8.onrender.com/docs
 
 ### Local Development
 

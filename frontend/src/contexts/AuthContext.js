@@ -39,7 +39,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('http://localhost:8000/auth/login', { email, password });
+      const response = await axios.post('https://multi-tenant-ldn8.onrender.com/auth/login', { email, password });
       const { access_token, role } = response.data;
       
       localStorage.setItem('token', access_token);

@@ -21,8 +21,8 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const [customersRes, healthRes] = await Promise.all([
-        axios.get('http://localhost:8000/customers'),
-        axios.get('http://localhost:8000/system-health')
+        axios.get('https://multi-tenant-ldn8.onrender.com/customers'),
+        axios.get('https://multi-tenant-ldn8.onrender.com/system-health')
       ]);
 
       const customers = customersRes.data;

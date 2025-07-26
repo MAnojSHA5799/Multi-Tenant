@@ -22,7 +22,7 @@ const CustomerOnboarding = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/customers', {
+      const response = await axios.get('https://multi-tenant-ldn8.onrender.com/customers', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -42,7 +42,7 @@ const CustomerOnboarding = () => {
     try {
       if (editingCustomer) {
         // Update existing customer
-        await axios.put(`http://localhost:8000/customers/${editingCustomer.id}`, formData, {
+        await axios.put(`https://multi-tenant-ldn8.onrender.com/customers/${editingCustomer.id}`, formData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ const CustomerOnboarding = () => {
         setEditingCustomer(null);
       } else {
         // Create new customer
-        await axios.post('http://localhost:8000/customers', formData, {
+        await axios.post('https://multi-tenant-ldn8.onrender.com/customers', formData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -89,7 +89,7 @@ const CustomerOnboarding = () => {
     }
 
     try {
-      await axios.delete(`http://localhost:8000/customers/${customerId}`, {
+      await axios.delete(`https://multi-tenant-ldn8.onrender.com/customers/${customerId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

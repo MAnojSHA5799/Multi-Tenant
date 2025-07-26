@@ -1,0 +1,2 @@
+render url = https://multi-tenant-ldn8.onrender.com/
+localhost url = https://multi-tenant-ldn8.onrender.com

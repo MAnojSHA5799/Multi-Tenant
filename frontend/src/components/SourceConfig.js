@@ -40,7 +40,7 @@ const SourceConfig = () => {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/customers');
+      const response = await axios.get('https://multi-tenant-ldn8.onrender.com/customers');
       setCustomers(response.data);
     } catch (error) {
       toast.error('Failed to load customers');
@@ -49,7 +49,7 @@ const SourceConfig = () => {
 
   const fetchConfig = async (customerId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/customers/${customerId}/source-config`);
+      const response = await axios.get(`https://multi-tenant-ldn8.onrender.com/customers/${customerId}/source-config`);
       setConfig(response.data);
       setFormData({
         db_host: response.data.db_host,
@@ -83,7 +83,7 @@ const SourceConfig = () => {
 
     setLoading(true);
     try {
-      await axios.post(`http://localhost:8000/customers/${selectedCustomer}/source-config`, formData);
+      await axios.post(`https://multi-tenant-ldn8.onrender.com/customers/${selectedCustomer}/source-config`, formData);
       toast.success('Configuration saved successfully!');
       fetchConfig(selectedCustomer);
     } catch (error) {
