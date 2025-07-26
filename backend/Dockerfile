@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Add PyJWT to the requirements
+RUN pip install PyJWT==2.8.0
+
 # Copy application code
 COPY . .
 
